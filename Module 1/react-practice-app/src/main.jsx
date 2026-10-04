@@ -16,11 +16,11 @@ createRoot(document.getElementById('root')).render(
 
 
 
-    <Greetings greet={"Good morning"} name={"rahim"} greet_emoji={"🖐️"}/>
-    <Greetings greet={"Good afternoon"} name={"karim"} greet_emoji={"🤙"}/>
-    <Greetings greet={"Good evening"} name={"fahim"} greet_emoji={"🙋‍♂️"}/>
-    <Greetings greet={"Good night"} name={"joshim"} greet_emoji={"🙋"}/>
-    <Greetings/>
+    <Greetings greet={"Good morning"} name={"rahim"} greetEmoji={"🖐️"} isLoggedIn={true}/>
+    <Greetings greet={"Good afternoon"} name={"karim"} greetEmoji={"🤙"} isLoggedIn={false} securityCode={"JK2340@$@KN"}/>
+    <Greetings greet={"Good evening"} name={"fahim"} greetEmoji={"🙋‍♂️"} isLoggedIn={true} securityCode={"JK23K98@$@KN"}/>
+    <Greetings greet={"Good night"} name={"joshim"} greetEmoji={"🙋"} isLoggedIn={false}/>
+    {0<1 && <Greetings/>}
 
 
     <ProductCard title = {"Laptop"} price={65000}  isStock={true}/>

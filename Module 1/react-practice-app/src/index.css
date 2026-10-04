@@ -16,3 +16,11 @@
   background-color: lightblue;
   border-radius: 10px;
 }
+
+.unauthorized-message-card{
+  border: solid 3px red;
+  margin: 10px;
+  padding: 20px;
+  background-color: lightcoral;
+  border-radius: 10px;
+}
