@@ -48,7 +48,7 @@ const Products = () => {
       {products.length === 0 ? (
         <h2>Products Not Available</h2>
       ) : (
-        products.map((product, index) => {
+        <div className="products">{products.map((product, index) => {
           // console.log(product)
           return (
             <ProductCard key={index}
@@ -58,7 +58,7 @@ const Products = () => {
               isStock={product.isStock}
             />
           );
-        })
+        })}</div>
       )}
     </div>
   );
