@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Welcome from './Welcome.jsx'
-import Greetings from './Greetings.jsx'
-import ProductCard from './ProductCard.jsx'
+import Welcome from './components/Welcome.jsx'
+import Greetings from './components/Greetings.jsx'
+import ProductCard from './components/ProductCard.jsx'
+import Products from './components/Products.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,8 +24,10 @@ createRoot(document.getElementById('root')).render(
     {0<1 && <Greetings/>}
 
 
-    <ProductCard title = {"Laptop"} price={65000}  isStock={true}/>
-    <ProductCard title = {"Mobile"} price={25000}  isStock={true}/>
-    <ProductCard title = {"Watch"} price={8000}  isStock={false}/>
+    {/* <ProductCard title = {"Laptop"} description={"This is description"} price={65000}  isStock={true}/>
+    <ProductCard title = {"Mobile"} description={"This is description"} price={25000}  isStock={true}/>
+    <ProductCard title = {"Watch"} description={"This is description"} price={8000}  isStock={false}/> */}
+
+    <Products />
   </StrictMode>,
 )

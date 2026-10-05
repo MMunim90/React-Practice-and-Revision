@@ -1,9 +1,10 @@
 import React from 'react';
 
-const ProductCard = ({title, price, isStock}) => {
+const ProductCard = ({title, description, price, isStock}) => {
     return (
         <div className='product-card'>
-            <h2>Title: {title}</h2>
+            <h2>{title}</h2>
+            <p>{description}</p>
             <p>Price: {price}</p>
             <p>In Stock: {isStock ? "✅" : "❌"}</p>
         </div>
