@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ProductCard = ({title, description, price, isStock}) => {
 
@@ -9,6 +9,10 @@ const ProductCard = ({title, description, price, isStock}) => {
         event.target.style.color = "white";
         alert(`${title} added to cart`)
     }
+
+    const [count, setCount] = useState(0);
+
+    console.log(count, setCount);
 
     const buyNowHandler = () => {
         alert(`${title} purchased successfully!!!`)
@@ -23,6 +27,8 @@ const ProductCard = ({title, description, price, isStock}) => {
             {/* <button onClick={addToCartHandler}>Add to Cart</button> */}
             <button onClick={(event) => addToCartHandler(event)}>Add to Cart</button>
             <button onClick={buyNowHandler}>Buy Now</button>
+            <h2>Like this Product? </h2> 
+            <button onClick={() => setCount(count+1)}>Like ({count}) 👍</button>
         </div>
     );
 };
