@@ -9,6 +9,11 @@
   border-radius: 10px;
 }
 
+.welcome{
+  display: inline;
+  margin: 150px;
+}
+
 .product-card{
   border: solid 3px blue;
   margin: 10px;
@@ -37,4 +42,57 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.add-to-cart{
+  background-color: lightyellow;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.add-to-cart-active{
+  background-color: lightgreen;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.mood-tracker-parent{
+  border: solid 3px rgb(119, 79, 79);
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(163, 155, 155);
+  border-radius: 10px;
+}
+
+.emoji-parent{
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 10px;
+}
+
+.emoji-button{
+  background-color: transparent;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.emoji-button:hover{
+  transform: scale(1.5);
+}
+
+.message{
+  background-color: lightyellow;
+  font-size: 16px;
+  padding: 20px;
+  margin: 5px;
+  margin-top: 20px;
+  border: 3px solid yellow;
+  border-radius: 10px;
 }

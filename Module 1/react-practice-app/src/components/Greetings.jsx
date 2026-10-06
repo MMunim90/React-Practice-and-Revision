@@ -2,7 +2,7 @@ import React from "react";
 import UnauthorizedCard from "./UnauthorizedCard";
 
 const Greetings = (props) => {
-  console.log(props);
+  // console.log(props);
   const {
     greet = "Good to see you!!!",
     name = "developer",

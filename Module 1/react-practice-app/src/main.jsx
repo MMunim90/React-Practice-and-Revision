@@ -5,6 +5,7 @@ import Welcome from './components/Welcome.jsx'
 import Greetings from './components/Greetings.jsx'
 import ProductCard from './components/ProductCard.jsx'
 import Products from './components/Products.jsx'
+import MoodTracker from './components/MoodTracker.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -29,5 +30,7 @@ createRoot(document.getElementById('root')).render(
     <ProductCard title = {"Watch"} description={"This is description"} price={8000}  isStock={false}/> */}
 
     <Products />
+
+    <MoodTracker/>
   </StrictMode>,
 )
