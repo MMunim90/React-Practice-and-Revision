@@ -18,3 +18,33 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.profile{
+  background-color: purple;
+  color: white;
+  font-size: 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 700px;
+  margin: 70px auto;
+  padding: 10px 20px;
+}
+
+.shopping-list{
+  background-color: blue;
+  color: white;
+  font-size: 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 700px;
+  margin: 70px auto;
+  padding: 10px 20px;
+}
+
+.items-parent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

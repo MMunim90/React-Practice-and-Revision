@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Count = ({counter, setCounter}) => {
-    console.log(counter, "Counter from count components");
+    // console.log(counter, "Counter from count components");
     return (
         <div>
             <h2>{counter}</h2>
