@@ -7,7 +7,7 @@ const Profile = () => {
         location: "Badda, NotunBazar",
     });
 
-    console.log(user);
+    // console.log(user);
 
     const handleAge = () => {
         const newUser = {...user, age: user.age+1};

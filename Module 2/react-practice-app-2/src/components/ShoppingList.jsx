@@ -10,10 +10,10 @@ const ShoppingList = () => {
   ]);
 
   const handleRemoveItem = (item) => {
-    console.log(item);
+    // console.log(item);
     const newShoppingList = list.filter((listItem) => listItem != item)
 
-    console.log(newShoppingList);
+    // console.log(newShoppingList);
     setList(newShoppingList);
   }
 

@@ -15,18 +15,18 @@ const Counter = () => {
     useEffect(() => {
         document.title = `Counter ${counter}`
         localStorage.setItem("useEffect", "useEffect Triggered!!!");
-        console.log("console from useEffect");
-        console.log(window.innerWidth);
+        // console.log("console from useEffect");
+        // console.log(window.innerWidth);
 
         window.addEventListener("resize", ()=>{
             setWidth(window.innerWidth);
             setHeight(window.innerHeight);
         })
     }, [counter])
-    console.log("console from outside");
+    // console.log("console from outside");
 
     useEffect(() => {
-        console.log("Use effect with empty dependency array");
+        // console.log("Use effect with empty dependency array");
     }, [])
     
     const counterHandler = () => {
