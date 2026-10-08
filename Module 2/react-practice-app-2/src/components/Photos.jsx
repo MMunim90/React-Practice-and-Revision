@@ -15,7 +15,7 @@ const Photos = () => {
       });
   }, []);
 
-  console.log(photos, isLoading);
+//   console.log(photos, isLoading);
 
 //   if(isLoading){
 //     return <div class="loader"></div>
@@ -28,7 +28,7 @@ const Photos = () => {
       {/* <button onClick={() => setCounter(counter+1)}>click here</button>
       <h2>{counter}</h2> */}
 
-      {isLoading ? <div class="loader"></div> : <div className="photo-parent">
+      {isLoading ? <div className="loader"></div> : <div className="photo-parent">
         {photos.map((photo, index) => {
           return (
             <div className="photo-child" key={index}>
