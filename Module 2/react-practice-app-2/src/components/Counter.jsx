@@ -7,6 +7,11 @@ const Counter = () => {
     const [height, setHeight] = useState(0);
     // console.log(counter, "Counter from counter components");
 
+    // three ways to write useEffect
+    // 1. useEffect(() => {.....});
+    // 2. useEffect(() => {.....}, []);
+    // 3. useEffect(() => {.....}, [count]);
+
     useEffect(() => {
         document.title = `Counter ${counter}`
         localStorage.setItem("useEffect", "useEffect Triggered!!!");
@@ -17,8 +22,12 @@ const Counter = () => {
             setWidth(window.innerWidth);
             setHeight(window.innerHeight);
         })
-    })
+    }, [counter])
     console.log("console from outside");
+
+    useEffect(() => {
+        console.log("Use effect with empty dependency array");
+    }, [])
     
     const counterHandler = () => {
         setCounter((prevCounter) => prevCounter+1); // updater function
