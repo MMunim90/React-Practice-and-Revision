@@ -1,4 +1,4 @@
-.counter{
+.counter {
   text-align: center;
   background-color: orange;
   color: white;
@@ -10,7 +10,7 @@
   margin: 70px auto;
 }
 
-.increment-btn{
+.increment-btn {
   background-color: yellow;
   color: black;
   font-size: 25px;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.profile{
+.profile {
   background-color: purple;
   color: white;
   font-size: 25px;
@@ -30,7 +30,7 @@
   padding: 10px 20px;
 }
 
-.shopping-list{
+.shopping-list {
   background-color: blue;
   color: white;
   font-size: 25px;
@@ -41,7 +41,7 @@
   padding: 10px 20px;
 }
 
-.items-parent{
+.items-parent {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,30 @@
   cursor: pointer;
 }
 
-.photos{
+.photos {
+  background-color: lightblue;
+  color: white;
+  font-size: 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 70px auto;
+  padding: 10px 20px;
+}
+
+.photo-parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+/* .photo-child {
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: burlywood;
+} */
+
+.users {
   background-color: lightblue;
   color: white;
   font-size: 25px;
@@ -60,24 +83,25 @@
   padding: 10px 20px;
 }
 
-.photo-parent{
+.user-parent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
-.photo-child{
+/* .user-child {
   border: 3px solid black;
   border-radius: 10px;
   text-align: center;
   background-color: burlywood;
-}
+  cursor: pointer;
+} */
 
 .loader {
   width: 50px;
   aspect-ratio: 1;
-  --_c:no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
-  background: 
+  --_c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background:
     var(--_c) top,
     var(--_c) left,
     var(--_c) right,
@@ -86,4 +110,25 @@
   animation: l7 1s infinite;
   margin: auto;
 }
-@keyframes l7 {to{transform: rotate(.5turn)}}
+@keyframes l7 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+.selected-users-parent {
+  background-color: lightblue;
+  color: white;
+  font-size: 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 90%;
+  margin: 70px auto;
+  padding: 10px 20px;
+}
+
+.selected-user {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}

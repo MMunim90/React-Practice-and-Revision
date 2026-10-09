@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import PhotoCard from "./PhotoCard";
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-//   const [counter, setCounter] = useState(0);
+  //   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos")
@@ -15,11 +16,11 @@ const Photos = () => {
       });
   }, []);
 
-//   console.log(photos, isLoading);
+  //   console.log(photos, isLoading);
 
-//   if(isLoading){
-//     return <div class="loader"></div>
-//   }
+  //   if(isLoading){
+  //     return <div class="loader"></div>
+  //   }
 
   return (
     <div className="photos">
@@ -28,16 +29,17 @@ const Photos = () => {
       {/* <button onClick={() => setCounter(counter+1)}>click here</button>
       <h2>{counter}</h2> */}
 
-      {isLoading ? <div className="loader"></div> : <div className="photo-parent">
-        {photos.map((photo, index) => {
-          return (
-            <div className="photo-child" key={index}>
-              <img src={photo.url} alt={photo.title} />
-              <h3>{photo.title}</h3>
-            </div>
-          );
-        })}
-      </div>}
+      {isLoading ? (
+        <div className="loader"></div>
+      ) : (
+        <div className="photo-parent">
+          {photos.map((photo, index) => {
+            return (
+              <PhotoCard photo={photo} key={index}/>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
