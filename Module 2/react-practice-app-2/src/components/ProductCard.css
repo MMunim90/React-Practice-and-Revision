@@ -1,0 +1,219 @@
+.prc {
+  --prc-bg: #ffffff;
+  --prc-ink: #1b2430;
+  --prc-muted: #5d6b7c;
+  --prc-line: #e3e8ef;
+  --prc-panel: #ffffff; /* image area stays light: product photos have white backgrounds */
+  --prc-accent: #2f5bea;
+  --prc-accent-ink: #ffffff;
+  --prc-star: #f2a600;
+  --prc-star-empty: #d5dbe5;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  background: var(--prc-bg);
+  color: var(--prc-ink);
+  border: 1px solid var(--prc-line);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(27, 36, 48, 0.06), 0 8px 24px rgba(27, 36, 48, 0.06);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.prc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(27, 36, 48, 0.08), 0 14px 32px rgba(27, 36, 48, 0.1);
+}
+
+.prc *,
+.prc *::before,
+.prc *::after {
+  box-sizing: border-box;
+}
+
+/* Image */
+.prc-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  padding: 24px;
+  background: var(--prc-panel);
+  border-bottom: 1px solid var(--prc-line);
+}
+
+.prc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.prc-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  background: #eef2fb;
+  color: #2a47b8;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Body */
+.prc-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px 18px 18px;
+}
+
+.prc-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Rating */
+.prc-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.prc-stars {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+
+.prc-stars-empty {
+  color: var(--prc-star-empty);
+}
+
+.prc-stars-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--prc-star);
+}
+
+.prc-rating-text {
+  font-weight: 600;
+}
+
+.prc-count {
+  color: var(--prc-muted);
+  font-weight: 400;
+}
+
+/* Description */
+.prc-desc {
+  margin: 10px 0 0;
+  color: var(--prc-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Footer */
+.prc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.prc-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.prc-button {
+  padding: 9px 16px;
+  background: var(--prc-accent);
+  color: var(--prc-accent-ink);
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.prc-button:hover {
+  filter: brightness(1.08);
+}
+
+.prc-button:active {
+  transform: scale(0.97);
+}
+
+.prc-button:focus-visible {
+  outline: 2px solid var(--prc-accent);
+  outline-offset: 2px;
+}
+
+/* Optional responsive grid for many cards */
+.prc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.prc-grid .prc {
+  max-width: none;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .prc {
+    --prc-bg: #161c26;
+    --prc-ink: #e8edf4;
+    --prc-muted: #96a3b5;
+    --prc-line: #2a3342;
+    --prc-accent: #7c9bff;
+    --prc-accent-ink: #0f1420;
+    --prc-star-empty: #3a4558;
+  }
+
+  .prc-category {
+    background: #243050;
+    color: #b7c7ff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prc,
+  .prc-button {
+    transition: none;
+  }
+
+  .prc:hover {
+    transform: none;
+  }
+}

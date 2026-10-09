@@ -15,7 +15,7 @@ const Counter = () => {
     renderCount.current = renderCount.current + 1;
   });
 
-  console.log(renderCount.current);
+  // console.log(renderCount.current);
 
   // console.log(counter, "Counter from counter components");
 

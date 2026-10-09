@@ -85,7 +85,7 @@
 
 .user-parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 
@@ -129,6 +129,33 @@
 
 .selected-user {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+}
+
+.products-parent{
+  background-color: lightblue;
+  color: white;
+  font-size: 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 70px auto;
+  padding: 10px 20px;
+}
+
+.products-parent-div{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.cart{
+  background-color: lightblue;
+  color: white;
+  font-size: 25px;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 90%;
+  margin: 70px auto;
+  padding: 10px 20px;
 }
